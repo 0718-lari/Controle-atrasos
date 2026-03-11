@@ -87,6 +87,12 @@ let novoHorario = prompt("Editar horário:", atrasos[index].horario);
 
 if(novoNome && novaTurma && novoHorario){
 
+    //VERIFICA SE O HÓRARIO É REALMENTE ATRASO
+    if(NOVOhORARIO <= "07:10"){
+        alert("Esse horário não é atraso");
+        return;
+    }
+
 atrasos[index].nome = novoNome;
 atrasos[index].turma = novaTurma;
 atrasos[index].horario = novoHorario;

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Atrasos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>⏰ Controle de Atrasos</h1>
+
+    <div class="formulario">
+
+        <label>Nome do aluno</label>
+        <input type="text" id="nome">
+
+        <label>Turma</label>
+        <input type="text" id="turma">
+
+        <label>Horário de chegada</label>
+        <input type="time" id="horario">
+
+        <button onclick="registrar()">Registrar Atraso</button>
+
+        <button onclick="exportarCSV()">Exportar CSV</button>
+    </div>
+
+    <h2>Lista de atrasos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Turma</th>
+                <th>Horário</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody id="lista">
+        </tbody>
+
+    </table>
+
+    <h3>Total de atrasos do dia: <span id="total">0</span></h3>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
